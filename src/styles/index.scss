@@ -13,6 +13,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
 }
 
 .calendar {
@@ -28,17 +29,18 @@ body {
   width: calc(($cell-size * 7) + ($container-padding * 2) + ($cell-gap * 6));
 
   &__day {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     box-sizing: border-box;
     height: $cell-size;
     width: $cell-size;
     background-color: $cell-color;
     border: $cell-border;
-    transition: transform 500ms;
+    transition: all 500ms;
 
     &::before {
-      display: inline-block;
-      text-align: center;
-
       font-family: Arial, sans-serif;
       font-size: $cell-font-size;
       color: $cell-font-color;
