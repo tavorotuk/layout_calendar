@@ -4,6 +4,7 @@ $cell-gap: 1px;
 $cell-border: 1px solid black;
 $cell-font-size: 30px;
 $cell-font-color: black;
+$cell-font-color-hover: #ffbfcb;
 $container-padding: 10px;
 
 body {
@@ -16,7 +17,7 @@ body {
 
 .calendar {
   display: flex;
-  align-content: center flex-start;
+  place-content: center flex-start;
   align-items: center;
   flex-wrap: wrap;
 
@@ -41,13 +42,13 @@ body {
       font-family: Arial, sans-serif;
       font-size: $cell-font-size;
       color: $cell-font-color;
-      width: 100%;
+      width: $cell-size;
       line-height: $cell-size;
     }
 
     &:hover {
       cursor: pointer;
-      background-color: #ffbfcb;
+      background-color: $cell-font-color-hover;
       transform: translateY(calc(-1 * $cell-size / 5));
     }
   }
