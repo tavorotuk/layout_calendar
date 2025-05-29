@@ -41,6 +41,9 @@ body {
     transition: all 500ms;
 
     &::before {
+      display: inline-block;
+      text-align: center;
+      
       font-family: Arial, sans-serif;
       font-size: $cell-font-size;
       color: $cell-font-color;
